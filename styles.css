@@ -5,7 +5,7 @@ body {
 .main-container {
   display: grid;
   grid-template-columns: 1fr 6fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 5fr;
 }
 
 .sidebar {
@@ -131,4 +131,38 @@ body {
 
 .main-content {
   grid-area: 2 / 2 / span 1 / span 1;
+  background-color:rgb(221, 229, 233);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  .your-projects{
+    grid-area: 1 / 1 / span  5 / span 4;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    background:rgb(83, 151, 129);
+
+    .card {
+      background-color: white;
+      .card-actions {
+        display: flex;
+        img {
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .announcements {
+    grid-area: 1 / 4 / span 3 / span 2;
+    background:rgb(34, 79, 177)
+  }
+
+  .trending {
+    grid-area: 3 / 4 / span 3 / span 2;
+    background:rgb(206, 222, 90)
+  }
 }
